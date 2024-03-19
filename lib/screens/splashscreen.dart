@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:quiz_app/screens/loginscreen.dart';
 
 class splashscreen extends StatelessWidget {
   const splashscreen({super.key});
@@ -43,20 +44,37 @@ class splashscreen extends StatelessWidget {
                         fontWeight: FontWeight.w100),
                   ),
                   Spacer(), // space to put the button in the bottom
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width - 25,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors
-                              .blueAccent, // Set the background color of the button
-                          onPrimary: Colors.white),
-                      onPressed: () {},
-                      child: Text(
-                        'Start',
-                        style: TextStyle(
-                            fontFamily: "Roboto",
-                            color: Colors.black,
-                            fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width - 25,
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                            side: MaterialStateProperty.all<BorderSide>(
+                                BorderSide(
+                              color: Color.fromARGB(255, 140, 139, 139),
+                              width: 0.5,
+                            )),
+                            overlayColor: MaterialStateProperty.all<Color>(
+                                Color.fromARGB(255, 255, 255, 255)),
+                            shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30.0))),
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.blue)),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const loginscreen())));
+                        },
+                        child: Text(
+                          'Start',
+                          style: TextStyle(
+                              fontFamily: "Montserrat",
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
                       ),
                     ),
                   ),
