@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:quiz_app/screens/categoryscreen.dart';
 
 class loginscreen extends StatelessWidget {
   const loginscreen({Key? key}) : super(key: key);
@@ -92,7 +93,13 @@ class loginscreen extends StatelessWidget {
                   ),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) =>
+                                    const categoryscreen())));
+                      },
                       child: Text(
                         "Login",
                         style: TextStyle(

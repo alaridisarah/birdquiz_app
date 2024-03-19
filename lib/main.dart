@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screens/loginscreen.dart';
 import 'package:quiz_app/screens/splashscreen.dart';
+import 'package:quiz_app/screens/categoryscreen.dart';
 
 void main() {
   // the enrty point in our project
