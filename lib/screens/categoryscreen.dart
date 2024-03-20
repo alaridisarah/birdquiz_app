@@ -12,7 +12,7 @@ class categoryscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screen_size = MediaQuery.of(context).size;
+    var screen_size = MediaQuery.of(context).size;
 
     return Scaffold(
         body: Center(
