@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:quiz_app/screens/categoryscreen.dart';
 
+final _formKey = GlobalKey<FormState>();
+
 class loginscreen extends StatelessWidget {
   const loginscreen({Key? key}) : super(key: key);
 

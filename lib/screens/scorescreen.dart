@@ -35,11 +35,60 @@ class scorescreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          TextButton(
-            onPressed: () {},
-            child: Text("Play Again",
-                style: TextStyle(
-                    decoration: TextDecoration.underline, color: Colors.white)),
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  style: ButtonStyle(
+                      side: MaterialStateProperty.all<BorderSide>(BorderSide(
+                        color: Color.fromARGB(255, 140, 139, 139),
+                        width: 0.5,
+                      )),
+                      overlayColor: MaterialStateProperty.all<Color>(
+                          Color.fromARGB(255, 255, 255, 255)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0))),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blue)),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  style: ButtonStyle(
+                      side: MaterialStateProperty.all<BorderSide>(BorderSide(
+                        color: Color.fromARGB(255, 140, 139, 139),
+                        width: 0.5,
+                      )),
+                      overlayColor: MaterialStateProperty.all<Color>(
+                          Color.fromARGB(255, 255, 255, 255)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0))),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blue)),
+                )
+              ],
+            ),
           )
         ],
       )),
