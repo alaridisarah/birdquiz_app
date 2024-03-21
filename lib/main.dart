@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screens/loginscreen.dart';
 import 'package:quiz_app/screens/quizscreen.dart';
+import 'package:quiz_app/screens/scorescreen.dart';
 import 'package:quiz_app/screens/splashscreen.dart';
 import 'package:quiz_app/screens/categoryscreen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const quizscreen(),
+      home: const scorescreen(),
     );
   }
 }
