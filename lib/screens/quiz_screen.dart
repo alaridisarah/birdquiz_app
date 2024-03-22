@@ -42,7 +42,7 @@ class _quizscreenState extends State<quizscreen> {
                       child: Row(
                         children: [
                           Text(
-                            "${_currentIndex + 1}/  ${widget.questionsAndAnswersList!.length}",
+                            "${_currentIndex + 1} /  ${widget.questionsAndAnswersList!.length}",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: "Montserrat",
@@ -110,7 +110,9 @@ class _quizscreenState extends State<quizscreen> {
                                 builder: (BuildContext context) => scorescreen(
                                     totalqs:
                                         widget.questionsAndAnswersList!.length,
-                                    score: _score)),
+                                    score: _score,
+                                    category: widget.category,
+                                    question: widget.questionsAndAnswersList)),
                           );
                         }
                       },

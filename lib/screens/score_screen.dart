@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:quiz_app/screens/category_screen.dart';
+import 'package:quiz_app/screens/quiz_screen.dart';
+import 'package:quiz_app/utils/global_variable.dart';
 
 class scorescreen extends StatelessWidget {
   num? score;
   num? totalqs;
-  scorescreen({super.key, this.totalqs, this.score});
+  final List? question;
+  final String? category;
+  scorescreen(
+      {super.key, this.totalqs, this.score, this.category, this.question});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,7 @@ class scorescreen extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.40,
           ),
           Text(
-            "Wellcome Sarah, You doing greate \n Your score is:",
+            "Wellcome again ${userNameController.text}, You doing greate \n Your score is:",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: "Montserrat",
@@ -45,9 +51,15 @@ class scorescreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                            builder: (BuildContext context) =>
+                                const categoryscreen()));
+                  },
                   child: Text(
-                    "Login",
+                    "Home",
                     style: TextStyle(
                         fontFamily: "Montserrat",
                         fontWeight: FontWeight.bold,
@@ -69,9 +81,18 @@ class scorescreen extends StatelessWidget {
                   width: 15,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) => quizscreen(
+                            questionsAndAnswersList: question,
+                            category: category),
+                      ),
+                    );
+                  },
                   child: Text(
-                    "Login",
+                    "Play again",
                     style: TextStyle(
                         fontFamily: "Montserrat",
                         fontWeight: FontWeight.bold,
