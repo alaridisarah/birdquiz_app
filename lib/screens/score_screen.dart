@@ -39,7 +39,7 @@ class scorescreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text("${score} / ${totalqs}"),
+          Text("$score / $totalqs"),
           SizedBox(
             height: 20,
           ),
