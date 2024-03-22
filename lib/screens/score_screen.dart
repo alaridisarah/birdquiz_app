@@ -6,7 +6,7 @@ import 'package:quiz_app/screens/quiz_screen.dart';
 import 'package:quiz_app/utils/global_variable.dart';
 
 class scorescreen extends StatelessWidget {
-  num? score;
+  int? score;
   num? totalqs;
   final List? question;
   final String? category;

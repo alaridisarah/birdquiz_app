@@ -16,7 +16,7 @@ class quizscreen extends StatefulWidget {
 
 class _quizscreenState extends State<quizscreen> {
   int _currentIndex = 0;
-  num _score = 0;
+  int _score = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -95,13 +95,16 @@ class _quizscreenState extends State<quizscreen> {
                       i++)
                     ElevatedButton(
                       onPressed: () {
+                        int score = widget
+                            .questionsAndAnswersList![_currentIndex]["scores"]
+                                [i]
+                            .toInt();
+                        _score = _score + score;
+                        print(_score);
                         if ((_currentIndex + 1) <
                             widget.questionsAndAnswersList!.length) {
                           setState(() {
                             _currentIndex++;
-                            _score = _score +
-                                widget.questionsAndAnswersList![_currentIndex]
-                                    ["scores"][i];
                           });
                         } else {
                           Navigator.push(
