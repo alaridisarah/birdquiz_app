@@ -28,7 +28,7 @@ class scorescreen extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.40,
           ),
           Text(
-            "Wellcome again ${userNameController.text}, You doing greate \n Your score is:",
+            "Welcome again ${userNameController.text}, You doing greate \n Your score is:",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: "Montserrat",
