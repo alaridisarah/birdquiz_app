@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/screens/loginscreen.dart';
-import 'package:quiz_app/screens/quizscreen.dart';
-import 'package:quiz_app/screens/scorescreen.dart';
-import 'package:quiz_app/screens/splashscreen.dart';
-import 'package:quiz_app/screens/categoryscreen.dart';
+import 'package:quiz_app/screens/login_screen.dart';
+import 'package:quiz_app/screens/quiz_screen.dart';
+import 'package:quiz_app/screens/score_screen.dart';
+import 'package:quiz_app/screens/splash_screen.dart';
+import 'package:quiz_app/screens/category_screen.dart';
 
 void main() {
   // the enrty point in our project
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const scorescreen(),
+      home: splashscreen(),
     );
   }
 }

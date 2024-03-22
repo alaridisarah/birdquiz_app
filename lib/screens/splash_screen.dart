@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:quiz_app/screens/loginscreen.dart';
+import 'package:quiz_app/screens/login_screen.dart';
 
 class splashscreen extends StatelessWidget {
   const splashscreen({super.key});
@@ -66,7 +66,7 @@ class splashscreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => const loginscreen())));
+                                  builder: ((context) => loginscreen())));
                         },
                         child: Text(
                           'Start',

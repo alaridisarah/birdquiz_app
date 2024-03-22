@@ -3,7 +3,9 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class scorescreen extends StatelessWidget {
-  const scorescreen({super.key});
+  num? score;
+  num? totalqs;
+  scorescreen({super.key, this.totalqs, this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class scorescreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text("8 / 10"),
+          Text("${score} / ${totalqs}"),
           SizedBox(
             height: 20,
           ),
