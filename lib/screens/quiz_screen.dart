@@ -137,6 +137,8 @@ class _quizscreenState extends State<quizscreen> {
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0))),
                         foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.blue),
+                        backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.blue)),
                   ),
                 SizedBox(
@@ -176,6 +178,8 @@ class _quizscreenState extends State<quizscreen> {
                           shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0))),
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.blue),
                           foregroundColor:
                               MaterialStateProperty.all<Color>(Colors.blue)),
                     ),
@@ -193,13 +197,30 @@ class _quizscreenState extends State<quizscreen> {
                   ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.18),
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute<void>(
-                            builder: (BuildContext context) =>
-                                const categoryscreen()));
-                  },
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: const Text('End the quiz'),
+                      content:
+                          const Text('Are you sure you want to end the quiz?'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute<void>(
+                                    builder: (BuildContext context) =>
+                                        const categoryscreen()));
+                          },
+                          child: const Text('YES!'),
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'Cancel'),
+                          child: const Text('cancel'),
+                        ),
+                      ],
+                    ),
+                  ),
                   child: Text(
                     "End the Quiz",
                     style: TextStyle(
@@ -217,6 +238,8 @@ class _quizscreenState extends State<quizscreen> {
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0))),
                       foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blue),
+                      backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.blue)),
                 ),
               ],

@@ -75,6 +75,8 @@ class scorescreen extends StatelessWidget {
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0))),
                       foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blue),
+                      backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.blue)),
                 ),
                 SizedBox(

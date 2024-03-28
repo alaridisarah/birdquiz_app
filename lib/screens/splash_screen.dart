@@ -3,8 +3,27 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:quiz_app/screens/login_screen.dart';
 
-class splashscreen extends StatelessWidget {
+class splashscreen extends StatefulWidget {
   const splashscreen({super.key});
+
+  @override
+  State<splashscreen> createState() => _splashscreenState();
+}
+
+class _splashscreenState extends State<splashscreen>
+    with SingleTickerProviderStateMixin {
+  Animation<Offset>? animation;
+  AnimationController? animationController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 6));
+    // Start animation
+    animationController!.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +41,12 @@ class splashscreen extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.35,
                   ),
-                  SizedBox(
-                      height: 110,
-                      width: 110,
-                      child: Image.asset("assets/logo.png")),
+                  FadeTransition(
+                      opacity: animationController!,
+                      child: SizedBox(
+                          height: 110,
+                          width: 110,
+                          child: Image.asset("assets/logo.png"))),
                   // Space between these elements
                   SizedBox(height: 25),
                   Text(
@@ -55,12 +76,14 @@ class splashscreen extends StatelessWidget {
                               color: Color.fromARGB(255, 140, 139, 139),
                               width: 0.5,
                             )),
-                            overlayColor: MaterialStateProperty.all<Color>(
-                                Color.fromARGB(255, 255, 255, 255)),
+                            overlayColor:
+                                MaterialStateProperty.all<Color>(Colors.blue),
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0))),
                             foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.blue),
+                            backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.blue)),
                         onPressed: () {
                           Navigator.push(
