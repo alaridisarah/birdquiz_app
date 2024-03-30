@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "255742010019",
+    "project_id": "bird-quizapp",
+    "storage_bucket": "bird-quizapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255742010019:android:1cd9f8b5e1cf0134ad1516",
+        "android_client_info": {
+          "package_name": "com.example.quiz_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVwMOAM4sfoxsNXFGzJdGQAAUIFC23QFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
