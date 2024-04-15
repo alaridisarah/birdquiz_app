@@ -16,10 +16,10 @@ Design Inspiration: The app's design is inspired by [Figma Design](https://www.f
 
 ## Installation
 
-Clone the repository: git clone https://github.com/alaridisarah/birdquiz_app
+Clone the repository: `git clone https://github.com/alaridisarah/birdquiz_app`
 
-Navigate to the project directory: cd BirdQuizApp
+Navigate to the project directory: `cd birdquiz_app`
 
-Install dependencies: flutter pub get
+Install dependencies: `flutter pub get`
 
-Run the app: flutter run
+Run the app: `flutter run`
