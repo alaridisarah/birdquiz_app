@@ -1,16 +1,25 @@
-# quiz_app
+![poster](https://www10.0zz0.com/2024/04/15/21/463677389.png)
+# Bird Quiz App
 
-A new Flutter project.
+Bird Quiz App is a mobile application developed using the Flutter framework. It features quizzes in multiple categories, offering a user-friendly interface for an engaging quiz experience.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+Quizzes in Multiple Categories: Users can choose from a variety of categories such as programming, History, and Sport.
 
-A few resources to get you started if this is your first Flutter project:
+User-Friendly Interface: The app is designed to be intuitive and easy to navigate, ensuring a seamless quiz-taking experience.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Score Tracking: Users can track their quiz scores and see their progress over time.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Design Inspiration: The app's design is inspired by [Figma Design](https://www.figma.com/community/file/1347094938018229290/animated-splash-screen?searchSessionId=ltwb23js-1124t2qwt22o).
+
+
+## Installation
+
+Clone the repository: git clone https://github.com/alaridisarah/birdquiz_app
+
+Navigate to the project directory: cd BirdQuizApp
+
+Install dependencies: flutter pub get
+
+Run the app: flutter run
